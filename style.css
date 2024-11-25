@@ -1,0 +1,442 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('images/cherry.gif');
+    background-size: cover; /* Ensure the background covers the entire screen */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    height: 100vh; /* Ensure it covers the full height of the viewport */
+    margin: 0;
+    padding: 0;
+    font-family: 'Commissioner', sans-serif;
+    background-color: #f1eff1;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    background-color: #FEF3EF;
+}
+
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    transition: top 0.3s; /* Smooth transition for hiding/showing */
+}
+
+/* When navbar is hidden */
+.navbar.hidden {
+    top: -60px; /* Moves the navbar off the screen */
+}
+
+.navbar .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    text-decoration: none;
+}
+
+.navbar .brand i {
+    font-size: 24px; /* Left icon size */
+    color: #007BFF;
+}
+
+.navbar .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar .nav-links a {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #007BFF;
+}
+
+.navbar .right-icon {
+    font-size: 24px; /* Right icon size */
+    color: #007BFF;
+    cursor: pointer;
+}
+
+.container-home{
+    max-width: 60rem; /* Limit the content width */
+    text-align: left; /* Left-align all text */
+    position: absolute; /* Change from relative to absolute for full control */
+    left: 6rem; /* Distance from the left edge */
+    top: 12rem; /* Distance from the top edge */
+    z-index: 10;
+}
+
+
+.container {
+    max-width: 60rem; /* Limit the content width */
+    text-align: left; /* Left-align all text */
+    position: absolute; /* Change from relative to absolute for full control */
+    left: 15rem; /* Distance from the left edge */
+    top: 60rem; /* Distance from the top edge */
+    z-index: 10;
+}
+
+
+h1 {
+    margin: 0;
+    font-size: 4rem;
+    font-family: 'Limelight', cursive;
+}
+
+.p-home {
+    margin: 13px 0;
+    font-size: 1rem;
+    font-family: 'Commissioner', sans-serif;
+}
+
+.p-name {
+    margin: 13px 0;
+    font-size: 3rem;
+    font-family: 'Commissioner', sans-serif;
+    font-weight: bolder;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the left */
+    gap: 26px;
+    margin-top: 26px;
+}
+
+.button {
+    display: inline-block;
+    padding: 13px 26px;
+    font-size: 20.8px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007BFF;
+    border-radius: 6.5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+.about-title {
+display: flex;
+justify-content: center;
+align-items: center;
+width: fit-content; /* Shrinks to the content size */
+padding: 10px 20px; /* Add padding for spacing */
+outline: 1px solid #333;
+border-radius: 10px; /* Rounds the corners */
+box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+margin-bottom: 15px;
+}
+
+.about-title h1 {
+font-family: 'Limelight', cursive; /* Use Limelight font */
+font-size: 3rem; /* Adjust font size */
+color: #333; /* Dark text */
+margin: 0; /* Remove default margin */
+}
+
+/* Left Section: Images */
+.about-images {
+    display: grid;
+    grid-template-rows: 1fr 1fr; /* Two rows for images */
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 10px;
+    flex: 1; /* Allow images section to grow */
+}
+
+.image-large {
+    background-image: url('images/me.png'); /* Replace with the path to your first small image */
+    background-size: cover;
+    background-position: center;
+    grid-row: span 2; /* Large image spans two rows */
+    background-color: #d0d0d0; /* Placeholder gray */
+    border-radius: 10px;
+    width: 250px; /* Full width */ /* Square aspect ratio */
+}
+
+.image1 {
+    background-image: url('images/flower.png'); /* Replace with the path to your first small image */
+    background-size: cover;
+    background-position: center;
+    background-color: #d0d0d0; /* Placeholder gray */
+    border-radius: 10px;
+    width: 100%; /* Full width */
+    aspect-ratio: 1; /* Square aspect ratio */
+}
+
+.image2 {
+    background-image: url('images/cat.png'); /* Replace with the path to your first small image */
+    background-size: cover;
+    background-position: center;
+    background-color: #d0d0d0; /* Placeholder gray */
+    border-radius: 10px;
+    width: 100%; /* Full width */
+}
+/* About Box Styling */
+.about-box {
+    display: flex;
+    width: 1050px;
+    flex-direction: row; /* Horizontal layout: images and text side by side */
+    background-color: #fff9e6; /* Light yellow background */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: 1px solid #333;
+    padding: 25px;
+    gap: 20px; /* Space between images and text */
+    margin-bottom: 10rem;
+}
+
+/* Right Section: Text */
+.about-text {
+    flex: 3; /* Allow text section to grow */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the text */
+    margin-left: 14rem;
+    margin-right: 1.5rem;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+}
+
+/* Box Styling */
+.projects-box{
+    display: flex;
+    width: 1050px;
+    flex-direction: row; /* Horizontal layout: images and text side by side */
+    background-color: #fff9e6; /* Light yellow background */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: 1px solid #333;
+    padding: 25px;
+    gap: 20px; /* Space between images and text */
+    margin-bottom: 2rem;
+}
+
+/* Right Section: Text */
+.projects-text {
+    flex: 3; /* Allow text section to grow */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the text */
+    margin-left: 14rem;
+    margin-right: 2rem;
+}
+
+.projects-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+}
+
+.projects-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content; /* Shrinks to the content size */
+    padding: 10px 20px; /* Add padding for spacing */
+    outline: 1px solid #333;
+    border-radius: 10px; /* Rounds the corners */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    margin-bottom: 15px;
+    }
+    
+.projects-title h1 {
+    font-family: 'Limelight', cursive; /* Use Limelight font */
+    font-size: 3rem; /* Adjust font size */
+    color: #333; /* Dark text */
+    margin: 0; /* Remove default margin */
+    }
+
+    
+    .projects-box {
+        display: flex;
+        gap: 30px; /* Space between the boxes */
+        justify-content: space-between; /* Ensure the boxes are evenly spaced */
+        margin-top: 20px;
+    }
+
+
+    .project-box {
+        flex: 1; /* Each box takes up equal width */
+        background-color: #fff9e6; /* Light background color for the boxes */
+        border-radius: 15px;
+        padding: 30px 40px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow around the box */
+        border: 1px solid #333;
+        height: auto; /* Adjust the height based on content */
+        display: flex;
+        flex-direction: column; /* Stack the title, image, and description vertically */
+        justify-content: flex-start; /* Align items at the start */
+    }
+
+    .contact-box {
+        flex: 1;
+        background-color: #fff9e6;
+        border-radius: 15px;
+        padding: 30px 40px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        border: 1px solid #333;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        z-index: 10;
+        margin-bottom: 10rem; /* Move margin-bottom here */
+    }
+    
+    
+    
+    .project-box h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        font-family: 'Limelight', cursive;
+        color: #333;
+    }
+    
+    .project-description {
+        margin-top: 20px; /* Space between box content and description */
+    }
+    
+    .project-description p {
+        font-size: 1.2rem;
+        color: #333;
+        margin: 0;
+    }
+    
+    /* Image Styling */
+    .project-image {
+        width: 100%; /* Make image responsive */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 400px; /* Limit the maximum width */
+        max-height: 300px; /* Limit the maximum height */
+        object-fit: cover; /* Ensure the image is cropped if it exceeds the dimensions */
+        border-radius: 15px;
+    }
+    
+    /* Ensuring the anchor tag takes up the full width of the image */
+    .project-link {
+        display: block;
+        width: 100%;
+        text-decoration: none; /* Remove default link underline */
+        transition: transform 0.3s ease-in-out; /* Smooth transition for the movement */
+
+    }
+
+    .project-link:hover {
+        transform: translateY(-10px); /* Moves the box up by 10px */
+    }
+
+
+    .media-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content; /* Shrinks to the content size */
+        padding: 10px 20px; /* Add padding for spacing */
+        outline: 1px solid #333;
+        border-radius: 10px; /* Rounds the corners */
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+        margin-bottom: 15px;
+        }
+        
+    .media-title h1 {
+        font-family: 'Limelight', cursive; /* Use Limelight font */
+        font-size: 3rem; /* Adjust font size */
+        color: #333; /* Dark text */
+        margin: 0; /* Remove default margin */
+        }
+
+
+.contact-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content; /* Shrinks to the content size */
+    padding: 10px 20px; /* Add padding for spacing */
+    outline: 1px solid #333;
+    border-radius: 10px; /* Rounds the corners */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    margin-bottom: 15px;
+    }
+
+
+    .contact-title h1 {
+        font-family: 'Limelight', cursive; /* Use Limelight font */
+        font-size: 3rem; /* Adjust font size */
+        color: #333; /* Dark text */
+        margin: 0; /* Remove default margin */
+        }
+
+/* Contact Description */
+.contact-description p {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 3rem;
+}
+
+/* Styling for Contact Links */
+.contact-links {
+    display: flex;
+    gap: 50px; /* Space between each link */
+}
+
+/* Styling for individual contact links */
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for links */
+.contact-link:hover {
+    color: #78016a; /* Blue color on hover */
+}
+
+
+/* Hover effect for SVG icons */
+.contact-link:hover svg {
+    stroke: #78016a; /* Blue color for icon on hover */
+}
